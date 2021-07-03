@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="SqlDialectMappings">
+    <file url="file://$USER_HOME$/Documents/喜相逢/导出数据/Result_2.sql" dialect="MySQL" />
+    <file url="file://$USER_HOME$/Documents/喜相逢/导出数据/Result_7.sql" dialect="MySQL" />
+    <file url="file://$USER_HOME$/Downloads/tmp_userdata3.sql" dialect="MySQL" />
     <file url="file://$USER_HOME$/work/data/行政区划/bs_area.sql" dialect="MySQL" />
     <file url="file://$USER_HOME$/work/data/行政区划/bs_city.sql" dialect="MySQL" />
     <file url="file://$USER_HOME$/work/data/行政区划/bs_province.sql" dialect="MySQL" />

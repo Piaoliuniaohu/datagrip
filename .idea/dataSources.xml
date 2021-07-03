@@ -29,7 +29,7 @@
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://localhost:3306</jdbc-url>
+      <jdbc-url>jdbc:mysql://localhost:3306?useUnicode=true&amp;characterEncoding=utf8&amp;useSSL=false&amp;autoReconnect=true&amp;zeroDateTimeBehavior=convertToNull</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
     <data-source source="LOCAL" name="zprs线上测试" group="zprs" uuid="e4e93621-f652-4dff-b567-c4440f64f64d">
@@ -42,67 +42,53 @@
         <property name="serverTimezone" value="UTC" />
       </driver-properties>
     </data-source>
-    <data-source source="LOCAL" name="围栏正式环境" uuid="ccb8fe59-6b6c-4ffd-9375-4dbf6ea4290a">
-      <driver-ref>mysql.8</driver-ref>
-      <synchronize>true</synchronize>
-      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://rm-wz9680s503v83p37kco.mysql.rds.aliyuncs.com:3306/mart?zeroDateTimeBehavior=CONVERT_TO_NULL</jdbc-url>
-      <working-dir>$ProjectFileDir$</working-dir>
-    </data-source>
-    <data-source source="LOCAL" name="无形报表" group="喜相逢" uuid="29b481ad-4a83-405e-bf5c-4982f36d845d">
+    <data-source source="LOCAL" name="DC正式库@阿里云" group="喜相逢" uuid="29b481ad-4a83-405e-bf5c-4982f36d845d">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://rm-wz9680s503v83p37kco.mysql.rds.aliyuncs.com:3306</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
-    <data-source source="LOCAL" name="接口表" group="喜相逢" uuid="5cbd4833-9b01-4b6d-871a-7967651ae5bc">
+    <data-source source="LOCAL" name="接口表@10.0.3.79" group="喜相逢" uuid="5cbd4833-9b01-4b6d-871a-7967651ae5bc">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://10.0.3.79:3306</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
-    <data-source source="LOCAL" name="BI@10.0.3.60" group="喜相逢" uuid="82913f2f-3d62-4be9-b894-0e1912acd62e">
-      <driver-ref>sqlserver.ms</driver-ref>
+    <data-source source="LOCAL" name="BI@10.0.3.60" group="ERP" uuid="82913f2f-3d62-4be9-b894-0e1912acd62e">
+      <driver-ref>sqlserver.jtds</driver-ref>
       <synchronize>true</synchronize>
-      <jdbc-driver>com.microsoft.sqlserver.jdbc.SQLServerDriver</jdbc-driver>
-      <jdbc-url>jdbc:sqlserver://10.0.3.60:1433;DatabaseName=BI</jdbc-url>
+      <jdbc-driver>net.sourceforge.jtds.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:jtds:sqlserver://10.0.3.60:1433/BI</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
-    <data-source source="LOCAL" name="DCS-数仓" group="喜相逢" uuid="f7f9ce1b-ee02-476d-bed2-83ad7a4216b6">
+    <data-source source="LOCAL" name="DCS-数仓@阿里云" group="喜相逢" uuid="f7f9ce1b-ee02-476d-bed2-83ad7a4216b6">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://rm-wz97018m49935j91ino.mysql.rds.aliyuncs.com:3306</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
-    <data-source source="LOCAL" name="ERP备份库" group="喜相逢" uuid="00c2bf54-6f0a-44ae-aea1-bc7f358fcc4e">
-      <driver-ref>sqlserver.ms</driver-ref>
+    <data-source source="LOCAL" name="ERP备份库@10.0.25.201" group="ERP" uuid="00c2bf54-6f0a-44ae-aea1-bc7f358fcc4e">
+      <driver-ref>sqlserver.jtds</driver-ref>
       <synchronize>true</synchronize>
-      <jdbc-driver>com.microsoft.sqlserver.jdbc.SQLServerDriver</jdbc-driver>
-      <jdbc-url>jdbc:sqlserver://10.0.25.201:1433</jdbc-url>
+      <jdbc-driver>net.sourceforge.jtds.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:jtds:sqlserver://10.0.25.201:1433</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
-    <data-source source="LOCAL" name="数仓-内网" group="喜相逢" uuid="65e6938c-de41-4b5d-be08-29d9c28f0466">
+    <data-source source="LOCAL" name="数仓-内网@10.0.25.138" group="喜相逢" uuid="65e6938c-de41-4b5d-be08-29d9c28f0466">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://10.0.25.138 :3306</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
-    <data-source source="LOCAL" name="淘汽-支付中心" group="喜相逢" uuid="3fbee11c-8ede-43d1-8305-8df036277c41">
+    <data-source source="LOCAL" name="淘汽-支付中心@阿里云" group="喜相逢" uuid="3fbee11c-8ede-43d1-8305-8df036277c41">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://rm-wz93o5cn82rlm307nwo.mysql.rds.aliyuncs.com:3306</jdbc-url>
-      <working-dir>$ProjectFileDir$</working-dir>
-    </data-source>
-    <data-source source="LOCAL" name="本地mongo" uuid="7aa7f113-2a2e-41ce-beba-5aa19c9dc42c">
-      <driver-ref>mongo</driver-ref>
-      <synchronize>true</synchronize>
-      <jdbc-driver>com.dbschema.MongoJdbcDriver</jdbc-driver>
-      <jdbc-url>mongodb://localhost:27017</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
     <data-source source="LOCAL" name="无形正式mongo" group="喜相逢" uuid="41250688-3146-4f81-ae01-4313ceded17a">
@@ -110,6 +96,70 @@
       <synchronize>true</synchronize>
       <jdbc-driver>com.dbschema.MongoJdbcDriver</jdbc-driver>
       <jdbc-url>mongodb://data-center-calc:27017/poi_info</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
+    <data-source source="LOCAL" name="crm线索@10.0.3.84" group="CRM" uuid="bce8f37a-20f6-4d77-b12d-2a71a45fb70c">
+      <driver-ref>sqlserver.jtds</driver-ref>
+      <synchronize>true</synchronize>
+      <remarks>crm线索</remarks>
+      <jdbc-driver>net.sourceforge.jtds.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:jtds:sqlserver://10.0.3.84:1433/XXF</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
+    <data-source source="LOCAL" name="阿里云SAAS业务系统" uuid="a2467c51-d1bc-47ce-b57e-95d5523f823e">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://am-wz91oqr22flcr0wik90650o.ads.aliyuncs.com:3306</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
+    <data-source source="LOCAL" name="CRM线索测试库@10.0.32.204" group="CRM" uuid="50fe658f-ef27-4604-bab6-4a233a2e8f50">
+      <driver-ref>sqlserver.jtds</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>net.sourceforge.jtds.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:jtds:sqlserver://10.0.32.204:1433/XXFcs</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
+    <data-source source="LOCAL" name="localxxf" uuid="ac0a9708-312c-486b-b3e5-61d2a39c7424">
+      <driver-ref>sqlserver.jtds</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>net.sourceforge.jtds.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:jtds:sqlserver://10.0.3.53/BI</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
+    <data-source source="LOCAL" name="ERP@10.0.3.59" group="ERP" uuid="4ab25bc9-e0a0-4691-821b-ea1b5d85e042">
+      <driver-ref>sqlserver.jtds</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>net.sourceforge.jtds.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:jtds:sqlserver://10.0.3.59:1433/XxfCar</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
+    <data-source source="LOCAL" name="漳浦人设正式库@121.40.58.40" group="zprs" uuid="2e2f1dba-491c-45c8-9a16-0d8a90190ada">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://121.40.58.40:3306</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
+    <data-source source="LOCAL" name="DC信审接口库@data-center-test" group="喜相逢" uuid="7ebea319-39ad-473a-b80c-9b7ce38796d3">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://data-center-test:3306/data_credit?useUnicode=true&amp;characterEncoding=utf-8&amp;autoReconnect=true&amp;failOverReadOnly=false</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
+    <data-source source="LOCAL" name="DC-SpringSecurity测试库@data-center-jason" group="喜相逢" uuid="ed67b25e-0b53-4053-8495-36f3dd41ea7d">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://data-center-jason:3306/data_auth_new?useUnicode=true&amp;characterEncoding=utf-8&amp;autoReconnect=true&amp;failOverReadOnly=false</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
+    <data-source source="LOCAL" name="无形后端" group="喜相逢" uuid="c35b8d15-1112-4484-883e-8ec686aa7b4e">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://internal.mysql.taoqicar.com:3306/wuxing?useUnicode=true&amp;characterEncoding=utf8&amp;useSSL=false&amp;autoReconnect=true</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
   </component>
